@@ -1,0 +1,10 @@
+version: 0.2
+
+env:
+  variables:
+    key: "value"
+            
+phases:
+  install:
+    commands:
+      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///Users/zhitkov/Desktop/current/swag.good.5.api2.json' --fail-on-warnings 
