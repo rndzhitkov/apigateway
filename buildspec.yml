@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-       - aws configure list
+#       - aws configure list
 #       - aws configure get
-#      - aws apigateway get-rest-apis
+      - aws apigateway get-rest-apis
 #      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///swag.api.json' --fail-on-warnings 
