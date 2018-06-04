@@ -14,4 +14,4 @@ phases:
       - pwd
       - ls -lah /codebuild/output/
       - ls -lah /codebuild/output/*
-#      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///swag.api.json' --fail-on-warnings 
+#      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///codebuild/output/src*/src/swag.api.json' --fail-on-warnings 
