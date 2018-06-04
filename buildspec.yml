@@ -10,4 +10,6 @@ phases:
 #       - aws configure list
 #       - aws configure get
       - aws apigateway get-rest-apis
-      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///swag.api.json' --fail-on-warnings 
+      - ls -lah
+      - pwd
+#      - aws apigateway put-rest-api --rest-api-id 3bk73x1dzi --mode merge --body 'file:///swag.api.json' --fail-on-warnings 
