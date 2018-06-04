@@ -50,7 +50,7 @@
         }
       }
     },
-    "/Spy": {
+    "/Pipeline": {
       "get": {
         "produces": [
           "application/json"
@@ -73,7 +73,7 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "$ref": "#/definitions/Spy"
+              "$ref": "#/definitions/Pipeline"
             },
             "headers": {
               "Access-Control-Allow-Origin": {
@@ -84,7 +84,7 @@
         }
       },
       "post": {
-        "operationId": "CreateSpy",
+        "operationId": "CreatePipeline",
         "consumes": [
           "application/json"
         ],
@@ -94,10 +94,10 @@
         "parameters": [
           {
             "in": "body",
-            "name": "NewSpy",
+            "name": "NewPipeline",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/NewSpy"
+              "$ref": "#/definitions/NewPipeline"
             }
           }
         ],
@@ -143,15 +143,15 @@
         }
       }
     },
-    "/Spy/{SpyId}": {
+    "/Pipeline/{PipelineId}": {
       "get": {
-        "operationId": "GetSpy",
+        "operationId": "GetPipeline",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
-            "name": "SpyId",
+            "name": "PipelineId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -161,7 +161,7 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "$ref": "#/definitions/Spy"
+              "$ref": "#/definitions/Pipeline"
             },
             "headers": {
               "Access-Control-Allow-Origin": {
@@ -180,7 +180,7 @@
         ],
         "parameters": [
           {
-            "name": "SpyId",
+            "name": "PipelineId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -216,14 +216,14 @@
       "type": "object",
       "properties": {
         "pet": {
-          "$ref": "#/definitions/Spy"
+          "$ref": "#/definitions/Pipeline"
         },
         "message": {
           "type": "string"
         }
       }
     },
-    "Spy": {
+    "Pipeline": {
       "type": "object",
       "properties": {
         "id": {
@@ -237,24 +237,24 @@
         }
       }
     },
-    "NewSpy": {
+    "NewPipeline": {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/SpyType"
+          "$ref": "#/definitions/PipelineType"
         },
         "price": {
           "type": "number"
         }
       }
     },
-    "SpyType": {
+    "PipelineType": {
       "type": "string",
       "enum": [
         "sys"
       ]
     },
-    "SpySpy": {
+    "PipelinePipeline": {
       "type": "string",
       "enum": [
         "ocean",
@@ -263,4 +263,3 @@
     }
   }
 }
-
